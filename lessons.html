@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Info School</title>
+    <script src="assets/js/jquery-3.4.1.slim.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap-4.4.1.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#searchInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#lessonList .col-12").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+   </script>
+   <script src="assets/js/theme.js"></script>
   </head>
+  
   <body>
-    <!--Header -->
         <div class="bg-dark">
           <div class="container">
             <div class="row mb-3">
@@ -27,7 +41,6 @@
          </div>
        </div>
 
-    <!--Contenu de la page -->
     <div class="container">
       <h1>Cours</h1>
       <div class="row mb-3">
@@ -69,7 +82,6 @@
       </div>
   </div>
 
-  <!--Pied de page -->
   <div class="bg-light">
     <div class="container">
       <div class="row">
@@ -84,25 +96,5 @@
     </div>
   </div>
 
-    <!-- Optional JavaScript -->
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-    <script src="assets/js/jquery-3.4.1.slim.js"></script>
-
-    <script src="assets/js/popper.js"></script>
-
-    <script src="assets/js/bootstrap-4.4.1.js"></script>
-    <script>
-      $(document).ready(function(){
-        $("#searchInput").on("keyup", function() {
-          var value = $(this).val().toLowerCase();
-          $("#lessonList .col-12").filter(function() {
-              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-          });
-        });
-      });
-   </script>
-   <script src="assets/js/theme.js"></script>
   </body>
 </html>
