@@ -1,0 +1,16 @@
+$headings-font-family: "Times New Roman", Times, serif; //police
+
+//couleurs du thème
+$primary : #22A1ED;
+$dark: #04040C;
+$theme-colors: (
+    "primary": $primary,
+    "dark": $dark
+);
+
+$headings-color: #284876; /*couleur des titres*/
+
+$card-bg:  #FCFCFC; /*couleur d'arrière-plan des cartes*/
+
+//arrière-plan du thème
+$image-bg : "../images/hiver.gif";
